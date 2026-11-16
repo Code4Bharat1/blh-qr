@@ -102,28 +102,19 @@ export default function Home() {
           maintained instruments to our prompt and reliable delivery. Whether it’s a grand
           celebration or an intimate gathering, Brass Line Hirer is your trusted partner for
           creating unforgettable musical experiences. Contact us today or visit our website to
-          explore our offerings.
+          explore our offerings. We also manufacture these items for you.
         </p>
       </section>
 
       {/* ---------- WEBSITES ---------- */}
       <section className="section" aria-labelledby="web-title">
-        <h2 id="web-title">Our websites</h2>
+        <h2 id="web-title">Our website</h2>
         <ul className="rows">
           <li>
             <a className="row" href="https://www.brasslinehirer.com" target="_blank" rel="noopener noreferrer">
               <GlobeIcon />
               <span className="row-text">
                 <span className="row-main">www.brasslinehirer.com</span>
-              </span>
-              <ArrowIcon />
-            </a>
-          </li>
-          <li>
-            <a className="row" href="https://www.brasslineindia.com" target="_blank" rel="noopener noreferrer">
-              <GlobeIcon />
-              <span className="row-text">
-                <span className="row-main">www.brasslineindia.com</span>
               </span>
               <ArrowIcon />
             </a>

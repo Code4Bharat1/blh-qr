@@ -16,7 +16,7 @@ const body = Hanken_Grotesk({
 export const metadata = {
   title: "Brass Line Hirer | Quality & service is our passion",
   description:
-    "Brass Line Hirer, Marine Lines, Mumbai. Call, WhatsApp, email or visit our websites.",
+    "Brass Line Hirer, Marine Lines, Mumbai. Call, WhatsApp, email or visit our website.",
 };
 
 export const viewport = {

@@ -75,19 +75,24 @@ export default function Home() {
         <div className="plate">
           <Image
             src="/logo.png"
-            alt="Brass Line Hirer – quality & service is our passion"
-            width={571}
-            height={149}
+            alt="Brass Line Hirer – Quality & Service is our passion"
+            width={402}
+            height={153}
             priority
             className="logo"
           />
         </div>
-        <p className="hero-line">Mumbai’s brass, copper &amp; gold hire, for every occasion.</p>
-        <a className="btn btn-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-          <WhatsAppIcon />
-          Chat on WhatsApp
-        </a>
-        <p className="hero-sub">+91 98190 00302</p>
+        <p className="hero-line">Mumbai's brass, copper &amp; gold hire, for every occasion.</p>
+        <div className="hero-btns">
+          <a className="btn btn-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
+            Chat on WhatsApp
+          </a>
+          <a className="btn btn-outline" href="/BLH-Brochure.pdf" download="BLH Brochure.pdf">
+            <DownloadIcon />
+            Download Brochure
+          </a>
+        </div>
       </header>
 
       {/* ---------- ABOUT ---------- */}
@@ -99,7 +104,7 @@ export default function Home() {
           offer a comprehensive range of top-quality brass instruments for hire, ensuring your
           event resonates with sophistication and harmony. Our dedication to customer
           satisfaction is reflected in every aspect of our service, from our meticulously
-          maintained instruments to our prompt and reliable delivery. Whether it’s a grand
+          maintained instruments to our prompt and reliable delivery. Whether it's a grand
           celebration or an intimate gathering, Brass Line Hirer is your trusted partner for
           creating unforgettable musical experiences. Contact us today or visit our website to
           explore our offerings. We also manufacture these items for you.
@@ -149,7 +154,7 @@ export default function Home() {
             <a className="row" href="tel:+919819000302">
               <PhoneIcon />
               <span className="row-text">
-                <span className="row-label">Phone</span>
+                <span className="row-label">Phone · M. Aslam</span>
                 <span className="row-main">9819000302</span>
               </span>
             </a>
@@ -158,7 +163,7 @@ export default function Home() {
             <a className="row" href="tel:+919820229075">
               <PhoneIcon />
               <span className="row-text">
-                <span className="row-label">Phone</span>
+                <span className="row-label">Phone · M. Waseem</span>
                 <span className="row-main">9820229075</span>
               </span>
             </a>
@@ -172,7 +177,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <p>quality &amp; service is our passion</p>
+        <p>Quality &amp; Service is our passion</p>
         <p>© {new Date().getFullYear()} Brass Line Hirer</p>
       </footer>
     </main>

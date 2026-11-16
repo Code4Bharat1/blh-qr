@@ -74,7 +74,7 @@ export default function Home() {
         <div className="rings" aria-hidden="true" />
         <div className="plate">
           <Image
-            src="/logo.png"
+            src="/logo-v2.png"
             alt="Brass Line Hirer – Quality & Service is our passion"
             width={402}
             height={153}

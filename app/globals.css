@@ -1,0 +1,283 @@
+:root {
+  --slate-deep: #2b3636;
+  --slate: #3a4848;
+  --slate-lift: #455656;
+  --brass: #c9a961;
+  --brass-light: #e6cf98;
+  --blush: #f3e6e4; /* matches the logo background */
+  --ink: #f6ecea;
+  --ink-soft: #c9d0cd;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--slate-deep);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--brass-light);
+  outline-offset: 3px;
+}
+
+/* ---------- page frame ---------- */
+.page {
+  max-width: 520px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--slate);
+  box-shadow: 0 0 0 1px rgba(201, 169, 97, 0.18);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 24px 44px;
+  text-align: center;
+  background: var(--slate-deep);
+  isolation: isolate;
+}
+
+/* concentric brass rings, like the base of a thali, radiating from the logo */
+.rings {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 34%;
+  width: 760px;
+  height: 760px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at center,
+    rgba(201, 169, 97, 0.2) 0,
+    rgba(201, 169, 97, 0.2) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+  -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 68%);
+  mask-image: radial-gradient(circle, #000 18%, transparent 68%);
+  animation: rings-in 1.6s ease-out both;
+}
+
+@keyframes rings-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.plate {
+  display: inline-block;
+  max-width: 100%;
+  padding: 10px;
+  background: var(--blush);
+  border: 1px solid var(--brass);
+  outline: 1px solid rgba(201, 169, 97, 0.5);
+  outline-offset: 5px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.hero-line {
+  max-width: 28ch;
+  margin: 32px auto 24px;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--brass-light);
+}
+
+.hero-sub {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--brass);
+  color: #231f14;
+}
+
+.btn-primary:hover {
+  background: var(--brass-light);
+}
+
+.btn-ghost {
+  width: 100%;
+  margin-top: 28px;
+  border: 1px solid var(--brass);
+  color: var(--brass-light);
+}
+
+.btn-ghost:hover {
+  background: rgba(201, 169, 97, 0.12);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* ---------- sections ---------- */
+.section {
+  padding: 40px 24px;
+  border-top: 1px solid rgba(246, 236, 234, 0.28);
+}
+
+.section h2 {
+  margin: 0 0 20px;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--brass);
+}
+
+.about {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink);
+  text-align: left;
+}
+
+/* ---------- link rows ---------- */
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows li + li {
+  border-top: 1px solid rgba(246, 236, 234, 0.22);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 4px;
+  color: var(--ink);
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.row > .icon:first-child {
+  color: var(--brass);
+}
+
+.row > .icon:last-child:not(:first-child) {
+  width: 18px;
+  height: 18px;
+  margin-left: auto;
+  color: var(--brass);
+}
+
+.row:hover {
+  color: var(--brass-light);
+  padding-left: 10px;
+}
+
+.row-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.row-label {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.row-main {
+  overflow-wrap: anywhere;
+}
+
+.row-address {
+  line-height: 1.5;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  padding: 32px 24px 48px;
+  text-align: center;
+  background: var(--slate-deep);
+  border-top: 1px solid var(--brass);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer p:first-child {
+  margin-bottom: 4px;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--brass-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rings {
+    animation: none;
+  }
+  .row,
+  .btn {
+    transition: none;
+  }
+}

@@ -154,7 +154,7 @@ export default function Home() {
             <a className="row" href="tel:+919819000302">
               <PhoneIcon />
               <span className="row-text">
-                <span className="row-label">Phone · M. Aslam</span>
+                <span className="row-label">Phone · M. Waseem</span>
                 <span className="row-main">9819000302</span>
               </span>
             </a>
@@ -163,7 +163,7 @@ export default function Home() {
             <a className="row" href="tel:+919820229075">
               <PhoneIcon />
               <span className="row-text">
-                <span className="row-label">Phone · M. Waseem</span>
+                <span className="row-label">Phone · M. Aslam</span>
                 <span className="row-main">9820229075</span>
               </span>
             </a>

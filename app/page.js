@@ -92,6 +92,10 @@ export default function Home() {
             <DownloadIcon />
             Download Brochure for Rent
           </a>
+          <a className="btn btn-outline" href="/BLH-Brochure-Purchase.pdf" download="BLH Brochure Purchase.pdf">
+            <DownloadIcon />
+            Download Brochure for Purchase
+          </a>
         </div>
       </header>
 
